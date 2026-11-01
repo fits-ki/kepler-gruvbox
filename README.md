@@ -2,7 +2,7 @@
 
 Warm, retro dark and light themes in the three classic Gruvbox contrasts. Medium is the familiar default. Hard and soft change the primary background only, the way the original palette does.
 
-This folder matches the layout in [gitkraken/kepler-themes](https://github.com/gitkraken/kepler-themes) `CONTRIBUTING.md`, so it can be copied into a fork later. **Do not open or push a pull request to that repository until Tobias confirms.** The gallery does not allow a theme to take another project's name without that project's okay, and the maintainer login below is a placeholder.
+Maintainer is Tobias Feigel (`Mr56k`). The theme package lives in this repository. A gallery contribution targets [gitkraken/kepler-themes](https://github.com/gitkraken/kepler-themes). This folder matches that repository's `CONTRIBUTING.md`.
 
 ## Variants
 
@@ -28,7 +28,7 @@ The family file is also MIT. See `LICENSE`.
 
 ## Install
 
-Copy `themes/gruvbox/gruvbox.json` into Kepler's themes folder. Steps, the `gallery.json` distinction, and the upstream warning are in [INSTALL.md](INSTALL.md).
+Copy `themes/gruvbox/gruvbox.json` into Kepler's themes folder. Steps and the `gallery.json` distinction are in [INSTALL.md](INSTALL.md).
 
 ## Contrast
 
@@ -53,11 +53,4 @@ Terminal colors follow the classic Gruvbox slots. On a light theme, ANSI black i
 
 ## Upstream pull request
 
-Prepared structurally, not submitted.
-
-1. Replace `TobiasFeigel` in `themes/gruvbox/gallery.json` with the real GitHub login.
-2. Get an okay from the Gruvbox maintainers for the name, or choose another display name. `CONTRIBUTING.md` calls this out for ports of projects that keep their own official themes. Ids should stay as they are once anyone has the file installed.
-3. Fork `gitkraken/kepler-themes`, copy `themes/gruvbox/` in unchanged, and run `node scripts/check.mjs` with Node 24.2 or later.
-4. Open the pull request only after the two points above are settled.
-
-Checked locally against the gallery's `scripts/check.mjs` and Kepler's theme validator: layout, formatting, ids, tags, and contrast all pass. Nothing was pushed to `gitkraken/kepler-themes`.
+An upstream pull request to the Kepler gallery ([gitkraken/kepler-themes](https://github.com/gitkraken/kepler-themes)) is intended and in progress. Copy `themes/gruvbox/` into a fork of that repository. That folder is the contribution: `gruvbox.json` and `gallery.json`.

@@ -23,19 +23,17 @@ If a tile says **Has problems** or **Has warnings**, open the badge. A contrast 
 
 ## What `gallery.json` is for
 
-`themes/gruvbox/gallery.json` lists maintainers and tags for the gallery index. Kepler does not need it on your machine. Leave it in this repo so a later gallery pull request has it.
+`themes/gruvbox/gallery.json` lists maintainers and tags for the gallery index. Kepler does not need it on your machine. Leave it in this repo so the gallery pull request has it.
 
-`maintainers` is currently `["TobiasFeigel"]`. That is a placeholder, not a confirmed GitHub login. Replace it with the real login before any upstream pull request.
+Maintainer is Tobias Feigel. `maintainers` is `["Mr56k"]`, his GitHub login.
 
-## Contributing it to the gallery later
+## Contributing it to the gallery
 
-Do not open that pull request until the naming question below is settled.
-
-The gallery source is https://github.com/gitkraken/kepler-themes. Its checks are in `CONTRIBUTING.md`.
+An upstream pull request to the Kepler gallery is intended and in progress. The gallery source is https://github.com/gitkraken/kepler-themes. Its checks are in `CONTRIBUTING.md`. Copy `themes/gruvbox/` into a fork of that repository.
 
 1. Fork the repository and branch from `main`.
 2. Copy this repo's `themes/gruvbox/` folder in as `themes/gruvbox/`. The folder must contain only `gruvbox.json` and `gallery.json`.
-3. Put the real GitHub login in `gallery.json`.
+3. `gallery.json` already lists maintainer `Mr56k` (Tobias Feigel).
 4. From the fork, with Node 24.2 or later:
 
    ```
@@ -43,8 +41,8 @@ The gallery source is https://github.com/gitkraken/kepler-themes. Its checks are
    ```
 
    `node scripts/check.mjs --fix` rewrites formatting. The family file has to be plain JSON, two-space indent, trailing newline, and at most 64 KB.
-5. Open a pull request. The gallery team reviews every one.
+5. Open the pull request against `gitkraken/kepler-themes`. The gallery team reviews every one.
 
-**Name.** `CONTRIBUTING.md` says not to name a theme after another project without that project's okay. Gruvbox is morhetz's theme (https://github.com/morhetz/gruvbox). Before an upstream pull request, either get the Gruvbox maintainers' okay for the name "Gruvbox", or ship a different display name. Theme ids (`gruvbox-dark-medium` and the rest) should not change after anyone is using them, because Kepler stores the id of the theme you picked.
+Theme ids (`gruvbox-dark-medium` and the rest) should stay as they are once anyone is using them, because Kepler stores the id of the theme you picked.
 
-This package was checked against that repository's `scripts/check.mjs` and the bundled Kepler validator. No pull request was opened and nothing was pushed there.
+This package was checked against that repository's `scripts/check.mjs` and the bundled Kepler validator.
